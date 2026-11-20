@@ -1,0 +1,38 @@
+# 虚拟环境与构建产物
+.venv/
+venv/
+/build/
+/dist/
+*.egg-info/
+
+# 缓存
+.cache/
+cache/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+
+# 本地编辑器和 Agent 配置
+.idea/
+.vscode/
+.agents/
+.codex/
+[Aa][Gg][Ee][Nn][Tt].md
+[Aa][Gg][Ee][Nn][Tt][Ss].md
+[Aa][Gg][Ee][Nn][Tt][Ss].override.md
+.DS_Store
+Thumbs.db
+
+# 本地环境变量
+.env
+.env.*
+!.env.example
+
+# 数据集与实验输出
+/data/MNIST/
+/artifacts/
