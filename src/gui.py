@@ -21,7 +21,9 @@
 
 from __future__ import annotations
 
+import os
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -1573,7 +1575,7 @@ class DigitRecognitionGUI:
     # 汇总文件操作
     # ------------------------------------------------------------------
     def _open_summary(self) -> None:
-        """用系统默认程序打开 summary.md。"""
+        """用系统默认程序打开 summary.md（Linux/Windows/macOS）。"""
         if self.summary_path is None or not self.summary_path.exists():
             messagebox.showinfo(
                 "提示",
@@ -1581,11 +1583,21 @@ class DigitRecognitionGUI:
             )
             return
         try:
-            subprocess.Popen(
-                ["xdg-open", str(self.summary_path)],
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-            )
+            if sys.platform.startswith("win"):
+                # Windows 使用文件关联打开 Markdown；不依赖 xdg-open。
+                os.startfile(str(self.summary_path))  # type: ignore[attr-defined]
+            elif sys.platform == "darwin":
+                subprocess.Popen(
+                    ["open", str(self.summary_path)],
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                )
+            else:
+                subprocess.Popen(
+                    ["xdg-open", str(self.summary_path)],
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                )
         except Exception as error:
             messagebox.showinfo(
                 "汇总文件",

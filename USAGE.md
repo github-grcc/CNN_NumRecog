@@ -9,11 +9,11 @@
 > `data/MNIST/` 和 `artifacts/` 已纳入版本库；如果数据缺失，仍可按 README 的“开始使用”重新准备。
 > 后文命令默认环境已经就绪。
 
-- 仅支持 Linux。
-- Python 解释器：`.venv/bin/python`。
+- 支持 Linux 和 Windows。
+- Python 解释器：Linux 为 `.venv/bin/python`，Windows 为 `.venv\Scripts\python.exe`。
 - 当前工作区依赖已安装在项目虚拟环境中：PyTorch、TorchVision、Matplotlib、psutil。
-- GUI 使用标准库 Tkinter；Linux 需要系统包 `python3-tk`。
-- 所有命令都从仓库根目录执行。
+- GUI 使用标准库 Tkinter；Linux 需要系统包 `python3-tk`，Windows 由 python.org 安装包提供。
+- 所有命令都从仓库根目录执行。Windows 下把下文命令中的 `.venv/bin/python` 替换为 `.venv\Scripts\python.exe`，路径分隔符按 Windows 写法调整。
 
 MNIST 数据默认放在 `data/MNIST/raw/`。如果数据缺失，可以在训练命令中加 `--download` 自动下载。
 

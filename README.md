@@ -21,7 +21,7 @@ TorchVision 将数据放在 `data/MNIST/raw/`。也可从 CVDF 镜像下载四�
 
 ## 运行实验
 
-项目只在 Linux 上运行，以下命令均从仓库根目录执行。
+项目支持 Linux 和 Windows，以下命令以 Linux 为例，均从仓库根目录执行。Windows 下把 `.venv/bin/python` 替换为 `.venv\Scripts\python.exe`，环境准备见 [environment.md](environment.md#windows-环境准备)。
 
 ```sh
 # 单组训练、评估和单图预测

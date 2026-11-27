@@ -165,3 +165,20 @@
   - GUI 窗口布局和清晰/模糊示例切换均正常。
 - `USAGE.md` 开头补充新克隆提示：`.venv/` 和 `data/MNIST/` 不随仓库下载，环境步骤指向 `environment.md`，数据准备指向 README。
 - 新增 `USAGE.md`，集中说明环境准备、训练/评估/预测/批量/汇总命令、GUI 用法、参数、产物和常见问题；README 文档表已加入入口。
+
+## 2026-11-27 · OpenCode · 完成 · Windows 兼容支持
+
+- `src/gui.py` 的“打开汇总”改为跨平台实现：
+  - Windows 使用 `os.startfile`；
+  - macOS 使用 `open`；
+  - Linux 继续使用 `xdg-open`。
+- `environment.md` 新增 Windows 环境准备：
+  - python.org 安装 Python 3.14 + Tcl/Tk；
+  - `py -3.14 -m venv .venv`；
+  - `.venv\Scripts\python.exe` 安装依赖和运行命令；
+  - CPU/CUDA 后端选择说明。
+- `README.md` 和 `USAGE.md` 补充 Windows 解释器路径，不再声明仅支持 Linux。
+- 验证：
+  - `python -m compileall -q main.py src` 通过。
+  - 使用模拟 `sys.platform == "win32"` 和 `os.startfile` 验证 GUI 打开汇总的 Windows 分支。
+  - 训练、评估、批量实验和 GUI 的其余代码只依赖 `pathlib`、`sys.executable` 和现有跨平台依赖，无需额外改动。

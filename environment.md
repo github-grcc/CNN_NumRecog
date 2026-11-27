@@ -2,7 +2,7 @@
 
 ## Python 与虚拟环境
 
-本项目只在 Linux 上运行，不提供 Windows 或 macOS 配置。使用 CPython `3.14.x` 和 [uv](https://docs.astral.sh/uv/getting-started/installation/)。在项目根目录运行以下命令。有同版本的 `.venv/` 时可以直接使用该环境安装依赖。
+本项目支持 Linux 和 Windows。使用 CPython `3.14.x` 和 [uv](https://docs.astral.sh/uv/getting-started/installation/)。以下命令以 Linux 为例；Windows 环境准备见本节末尾。有同版本的 `.venv/` 时可以直接使用该环境安装依赖。
 
 ```sh
 uv venv --python 3.14 .venv
@@ -10,7 +10,33 @@ uv pip install --python .venv --torch-backend=auto -r requirements.txt
 uv pip check --python .venv
 ```
 
-IDE 使用项目中的 Python 解释器，路径为 `.venv/bin/python`。图形界面使用标准库 Tkinter；Linux 系统需要安装 `python3-tk`（多数桌面发行版已预装）。
+Linux 下 IDE 使用项目中的 Python 解释器，路径为 `.venv/bin/python`。图形界面使用标准库 Tkinter；Linux 系统需要安装 `python3-tk`（多数桌面发行版已预装）。
+
+### Windows 环境准备
+
+1. 从 [python.org](https://www.python.org/downloads/) 安装 Python 3.14，安装时保留 Tcl/Tk 组件，这样 Tkinter GUI 可直接使用。
+2. 在 PowerShell 中进入项目根目录，创建虚拟环境：
+
+```powershell
+py -3.14 -m venv .venv
+.venv\Scripts\Activate.ps1
+uv pip install --python .venv\Scripts\python.exe --torch-backend=auto -r requirements.txt
+uv pip check --python .venv\Scripts\python.exe
+```
+
+如果 PowerShell 禁止执行激活脚本，可以只对当前终端临时放行：
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+```
+
+之后所有 Python 命令使用：
+
+```text
+.venv\Scripts\python.exe main.py ...
+```
+
+无 NVIDIA GPU 时把 `--torch-backend=auto` 改为 `--torch-backend=cpu`，运行时也可加 `--device cpu`。
 
 ## Requirements 与后端
 
@@ -23,7 +49,7 @@ IDE 使用项目中的 Python 解释器，路径为 `.venv/bin/python`。图形�
 | `matplotlib` | 学习曲线、卷积核、特征图与错分样本 |
 | `psutil` | 采样训练进程的内存 |
 
-新环境安装时解析当前 Linux 环境兼容的稳定版。uv 的 `--torch-backend=auto` 根据当前环境选择 PyTorch 构建。只做 CPU 实验时，可将安装命令的后端改为 `--torch-backend=cpu`。需要手动指定 GPU 构建时，从官方 Linux 安装选项中选择后端，并让 `torch` 和 `torchvision` 走同一构建源。[uv 的 PyTorch 安装说明](https://docs.astral.sh/uv/guides/integration/pytorch/#automatic-backend-selection) · [PyTorch 安装指南](https://pytorch.org/get-started/locally/)
+新环境安装时解析当前平台兼容的稳定版。uv 的 `--torch-backend=auto` 根据当前环境选择 PyTorch 构建。只做 CPU 实验时，可将安装命令的后端改为 `--torch-backend=cpu`。需要手动指定 GPU 构建时，按平台、GPU 与驱动选择后端，并让 `torch` 和 `torchvision` 走同一构建源。[uv 的 PyTorch 安装说明](https://docs.astral.sh/uv/guides/integration/pytorch/#automatic-backend-selection) · [PyTorch 安装指南](https://pytorch.org/get-started/locally/)
 
 正式跑实验前，用 `uv pip freeze --python .venv` 保存已安装的版本清单到本次运行目录，并记录 Python 版本和实际 PyTorch 后端。同机复跑时使用该清单和对应后端。项目已有的 `pyproject.toml` 和 `uv.lock` 属于初始化模板，安装运行依赖时使用上述 `uv pip` 命令。
 
