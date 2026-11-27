@@ -312,7 +312,7 @@ class DigitRecognitionGUI:
         self.root.configure(bg=BACKGROUND)
         self.root.minsize(1080, 700)
 
-        width, height = 1280, 960
+        width, height = 1280, 1000
         screen_width = self.root.winfo_screenwidth()
         screen_height = self.root.winfo_screenheight()
         x = max(0, (screen_width - width) // 2)
@@ -368,7 +368,7 @@ class DigitRecognitionGUI:
         style.configure(
             "Treeview",
             font=(self.font_family, 9),
-            rowheight=24,
+            rowheight=30,
             background=SURFACE,
             fieldbackground=SURFACE,
         )
