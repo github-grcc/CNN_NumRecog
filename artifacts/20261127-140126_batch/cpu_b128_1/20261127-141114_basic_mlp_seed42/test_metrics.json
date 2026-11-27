@@ -1,0 +1,82 @@
+[
+  {
+    "epoch": 1,
+    "checkpoint": "epoch_01.pt",
+    "test_loss": 0.16153432452082633,
+    "test_accuracy": 0.9517,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 2,
+    "checkpoint": "epoch_02.pt",
+    "test_loss": 0.10612945919781923,
+    "test_accuracy": 0.9681,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 3,
+    "checkpoint": "epoch_03.pt",
+    "test_loss": 0.0938346673693508,
+    "test_accuracy": 0.9709,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 4,
+    "checkpoint": "epoch_04.pt",
+    "test_loss": 0.08275567451417447,
+    "test_accuracy": 0.9739,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 5,
+    "checkpoint": "epoch_05.pt",
+    "test_loss": 0.07614985579922795,
+    "test_accuracy": 0.975,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 6,
+    "checkpoint": "epoch_06.pt",
+    "test_loss": 0.0741763716828078,
+    "test_accuracy": 0.9786,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 7,
+    "checkpoint": "epoch_07.pt",
+    "test_loss": 0.0817860804155469,
+    "test_accuracy": 0.975,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 8,
+    "checkpoint": "epoch_08.pt",
+    "test_loss": 0.07828210881071863,
+    "test_accuracy": 0.9771,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 9,
+    "checkpoint": "epoch_09.pt",
+    "test_loss": 0.07464835836682468,
+    "test_accuracy": 0.9789,
+    "samples": 10000,
+    "batches": 79
+  },
+  {
+    "epoch": 10,
+    "checkpoint": "epoch_10.pt",
+    "test_loss": 0.07174012232706882,
+    "test_accuracy": 0.9797,
+    "samples": 10000,
+    "batches": 79
+  }
+]

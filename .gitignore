@@ -33,6 +33,5 @@ Thumbs.db
 .env.*
 !.env.example
 
-# 数据集与实验输出
-/data/MNIST/
-/artifacts/
+# 数据集与实验输出已按用户要求纳入版本库；
+# 后续新生成的运行目录请手动确认后再提交。

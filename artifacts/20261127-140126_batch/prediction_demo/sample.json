@@ -1,0 +1,8 @@
+{
+  "test_index": 0,
+  "true_label": 7,
+  "predicted": 7,
+  "confidence": 0.9999542236328125,
+  "checkpoint": "artifacts/20261127-140126_batch/cpu_b128_1/20261127-141652_augmented_cnn_seed42/weights/final.pt",
+  "input_image": "artifacts/20261127-140126_batch/prediction_demo/input_digit.png"
+}

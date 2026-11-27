@@ -1,0 +1,41 @@
+{
+  "created_at": "20261127-140126",
+  "device": "cpu",
+  "device_reason": "用户显式指定 CPU",
+  "stages": [
+    "basic",
+    "augmented"
+  ],
+  "models": [
+    "cnn",
+    "mlp"
+  ],
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "epochs": 10,
+  "initial_batch_size": 128,
+  "lr": 0.001,
+  "max_batches": null,
+  "attempts": [
+    {
+      "device": "cpu",
+      "batch_size": 128,
+      "run_root": "/home/grcc/dev/python程序设计/CNN_NumRecog/artifacts/20261127-140126_batch/cpu_b128_1",
+      "status": "completed",
+      "runs": 12
+    }
+  ],
+  "final_run_root": "/home/grcc/dev/python程序设计/CNN_NumRecog/artifacts/20261127-140126_batch/cpu_b128_1",
+  "final_device": "cpu",
+  "status": "completed",
+  "evaluated_runs": 12,
+  "run_count": 12,
+  "summary": {
+    "summary_csv": "/home/grcc/dev/python程序设计/CNN_NumRecog/artifacts/20261127-140126_batch/summary.csv",
+    "summary_md": "/home/grcc/dev/python程序设计/CNN_NumRecog/artifacts/20261127-140126_batch/summary.md",
+    "summary_json": "/home/grcc/dev/python程序设计/CNN_NumRecog/artifacts/20261127-140126_batch/summary.json"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "config": {
+    "stage": "augmented",
+    "model": "cnn",
+    "seed": 42,
+    "epochs": 10,
+    "batch_size": 128,
+    "lr": 0.001,
+    "device": "cpu",
+    "device_reason": "用户显式指定 CPU",
+    "num_workers": 0,
+    "pin_memory": false,
+    "max_batches": null,
+    "parameter_count": 105866,
+    "data_root": "/home/grcc/dev/python程序设计/CNN_NumRecog/data",
+    "train_samples": 60000,
+    "test_samples": 10000
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.3611174630602201,
+      "train_accuracy": 0.8885166666666666,
+      "train_samples": 60000,
+      "train_seconds": 24.735934691001603,
+      "throughput_samples_per_second": 2425.6208932273216
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.11475011859337489,
+      "train_accuracy": 0.96515,
+      "train_samples": 60000,
+      "train_seconds": 25.32223074400099,
+      "throughput_samples_per_second": 2369.4594921979538
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.08226206050912539,
+      "train_accuracy": 0.97465,
+      "train_samples": 60000,
+      "train_seconds": 25.215360983005667,
+      "throughput_samples_per_second": 2379.5019250542578
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.06662700054049492,
+      "train_accuracy": 0.9784833333333334,
+      "train_samples": 60000,
+      "train_seconds": 22.96179908400518,
+      "throughput_samples_per_second": 2613.0356676535434
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.05880956855018934,
+      "train_accuracy": 0.9812833333333333,
+      "train_samples": 60000,
+      "train_seconds": 25.22773103000509,
+      "throughput_samples_per_second": 2378.3351712699746
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.052198055972655616,
+      "train_accuracy": 0.9836833333333334,
+      "train_samples": 60000,
+      "train_seconds": 24.35909369699948,
+      "throughput_samples_per_second": 2463.1458274406455
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.04480967414776484,
+      "train_accuracy": 0.9853166666666666,
+      "train_samples": 60000,
+      "train_seconds": 24.431224034997285,
+      "throughput_samples_per_second": 2455.8736768182835
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.04147542558362086,
+      "train_accuracy": 0.9871666666666666,
+      "train_samples": 60000,
+      "train_seconds": 24.90320902500389,
+      "throughput_samples_per_second": 2409.328048435743
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.039324016174922385,
+      "train_accuracy": 0.98755,
+      "train_samples": 60000,
+      "train_seconds": 25.823421076995146,
+      "throughput_samples_per_second": 2323.472161999912
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.0371297800347209,
+      "train_accuracy": 0.9882833333333333,
+      "train_samples": 60000,
+      "train_seconds": 26.44342482399952,
+      "throughput_samples_per_second": 2268.995048838954
+    }
+  ],
+  "resources": {
+    "cpu_time_seconds": 1075.6200000000001,
+    "peak_rss_mib": 489.203125,
+    "gpu_peak_allocated_mib": null,
+    "gpu_peak_reserved_mib": null
+  },
+  "test": {
+    "loss": 0.02173115392383188,
+    "accuracy": 0.9922,
+    "samples": 10000,
+    "batches": 79
+  },
+  "total_training_seconds": 249.42342919001385,
+  "environment": {
+    "platform": "Linux-7.3.4+deb14-amd64-x86_64-with-glibc2.43",
+    "machine": "x86_64",
+    "python": "3.14.10",
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "cuda_available": false,
+    "cuda_version": null,
+    "cudnn_version": null,
+    "cpu_count_logical": 16,
+    "cpu_count_physical": 8,
+    "cpu_model": "unknown",
+    "device": "cpu"
+  }
+}

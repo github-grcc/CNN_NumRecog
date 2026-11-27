@@ -98,7 +98,7 @@ TorchVision 将数据放在 `data/MNIST/raw/`。也可从 CVDF 镜像下载四�
 - 根据工作范围开分支，例如 `feat/model` 或 `docs/experiment`。提交前检查 `git status` 和 `git diff --cached`，让每次提交集中在一项可复核的改动上。
 - 按工程文档划分数据、模型、训练和评估模块，脚本使用项目相对路径。改动网络或实验条件时同步更新对应文档，并记录验证命令与结果。
 - 团队成员和 Agent 在开工前阅读 `history.md`，记录任务与涉及文件，避免多人同时修改同一处。完成、受阻或交接时追加进度，随相关改动一并提交。
-- 版本库跟踪源码、文档和依赖清单。本地 Agent 指令文件、虚拟环境、缓存、数据与训练产物由 [.gitignore](.gitignore) 管理。
+- 版本库跟踪源码、文档、依赖清单、MNIST 数据和当前实验产物。本地 Agent 指令文件、虚拟环境与缓存由 [.gitignore](.gitignore) 管理。
 
 ## 许可证
 

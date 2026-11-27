@@ -71,4 +71,4 @@ CUDA 路径将模型、样本和标签放入同一设备，统一启用 `pin_mem
 └── experiment.md           实验设置与指标
 ```
 
-以项目根目录作为运行位置，数据通过相对路径 `data/MNIST/raw` 读取。版本库收录源码、文档和依赖清单，虚拟环境、原始数据、IDE 配置与生成产物按 [`.gitignore`](.gitignore) 管理。课程演示所需权重和图表从 `artifacts/` 中选取并打包。
+以项目根目录作为运行位置，数据通过相对路径 `data/MNIST/raw` 读取。版本库收录源码、文档、依赖清单、MNIST 数据和当前实验产物；虚拟环境、IDE 配置和缓存仍按 [`.gitignore`](.gitignore) 管理。课程演示所需权重和图表从 `artifacts/` 中选取并打包。

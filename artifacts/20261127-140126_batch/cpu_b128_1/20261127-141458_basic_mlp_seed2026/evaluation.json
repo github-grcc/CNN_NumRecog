@@ -1,0 +1,106 @@
+{
+  "run_dir": "/home/grcc/dev/python程序设计/CNN_NumRecog/artifacts/20261127-140126_batch/cpu_b128_1/20261127-141458_basic_mlp_seed2026",
+  "config": {
+    "stage": "basic",
+    "model": "mlp",
+    "seed": 2026,
+    "epochs": 10,
+    "batch_size": 128,
+    "lr": 0.001,
+    "device": "cpu",
+    "device_reason": "用户显式指定 CPU",
+    "num_workers": 0,
+    "pin_memory": false,
+    "max_batches": null,
+    "parameter_count": 105745,
+    "data_root": "/home/grcc/dev/python程序设计/CNN_NumRecog/data",
+    "train_samples": 60000,
+    "test_samples": 10000
+  },
+  "test_metrics": [
+    {
+      "epoch": 1,
+      "checkpoint": "epoch_01.pt",
+      "test_loss": 0.1601892787516117,
+      "test_accuracy": 0.9533,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 2,
+      "checkpoint": "epoch_02.pt",
+      "test_loss": 0.1055303849607706,
+      "test_accuracy": 0.9675,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 3,
+      "checkpoint": "epoch_03.pt",
+      "test_loss": 0.09320808617025614,
+      "test_accuracy": 0.9692,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 4,
+      "checkpoint": "epoch_04.pt",
+      "test_loss": 0.08763890638202429,
+      "test_accuracy": 0.9723,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 5,
+      "checkpoint": "epoch_05.pt",
+      "test_loss": 0.08375325555428863,
+      "test_accuracy": 0.9732,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 6,
+      "checkpoint": "epoch_06.pt",
+      "test_loss": 0.07814510830715299,
+      "test_accuracy": 0.9772,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 7,
+      "checkpoint": "epoch_07.pt",
+      "test_loss": 0.07240806806404143,
+      "test_accuracy": 0.9782,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 8,
+      "checkpoint": "epoch_08.pt",
+      "test_loss": 0.07282016618133057,
+      "test_accuracy": 0.9788,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 9,
+      "checkpoint": "epoch_09.pt",
+      "test_loss": 0.0817050556499511,
+      "test_accuracy": 0.9758,
+      "samples": 10000,
+      "batches": 79
+    },
+    {
+      "epoch": 10,
+      "checkpoint": "epoch_10.pt",
+      "test_loss": 0.07977077975319699,
+      "test_accuracy": 0.9774,
+      "samples": 10000,
+      "batches": 79
+    }
+  ],
+  "figures": [
+    "curves.png",
+    "misclassified.png"
+  ]
+}

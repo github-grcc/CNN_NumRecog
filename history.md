@@ -131,6 +131,13 @@
   - 连续点击依次预测 1、2、3，按钮显示“使用示例 4/10”。
   - 第 10 张之后会回到第 1 张。
 
+## 2026-11-27 · OpenCode · 完成 · GitHub 公开仓库与完整产物上传
+
+- 仓库 `github-grcc/CNN_NumRecog` 已创建并改为 Public。
+- 更新 `.gitignore`：不再忽略 `data/MNIST/` 和 `artifacts/`，将 MNIST 原始数据和正式实验产物纳入版本库。
+- 提交课程 `refs/` 的既有修改、`data/` 和 `artifacts/`。
+- 说明：数据目录约 64 MB，artifacts 约 58 MB，最大单文件 47 MB，低于 GitHub 100 MB 限制。
+
 ## 2026-11-27 · OpenCode · 完成 · GUI 模糊示例集
 
 - 新增 `examples/ambiguous/`：

@@ -4,9 +4,10 @@
 
 ## 1. 运行环境
 
-> 新克隆用户注意：`.venv/` 和 `data/MNIST/` 已被 `.gitignore` 排除，不会随 Git 仓库下载。请先按
-> [environment.md](environment.md) 的“Python 与虚拟环境”和“Requirements 与后端”两节创建虚拟环境并安装依赖，
-> 再按 [README.md](README.md) 的“开始使用”准备 MNIST 数据。后文命令默认环境已经就绪。
+> 新克隆用户注意：`.venv/` 不会随 Git 仓库下载，请先按
+> [environment.md](environment.md) 的“Python 与虚拟环境”和“Requirements 与后端”两节创建虚拟环境并安装依赖。
+> `data/MNIST/` 和 `artifacts/` 已纳入版本库；如果数据缺失，仍可按 README 的“开始使用”重新准备。
+> 后文命令默认环境已经就绪。
 
 - 仅支持 Linux。
 - Python 解释器：`.venv/bin/python`。
@@ -166,7 +167,7 @@ CUDA 显存不足时，`batch` 会先以 batch size 64 从头重跑；`auto` 模
     └── final.pt
 ```
 
-批量实验根目录还包含 `summary.csv`、`summary.md` 和 `summary.json`。`artifacts/` 被 `.gitignore` 忽略，仅保存在本地。
+批量实验根目录还包含 `summary.csv`、`summary.md` 和 `summary.json`。当前 MNIST 数据和 `artifacts/` 已纳入版本库；后续新增运行目录需要手动确认后再提交。
 
 ## 6. 示例图片
 
