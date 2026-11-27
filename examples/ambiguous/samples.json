@@ -1,0 +1,102 @@
+[
+  {
+    "file": "digit_0_amb_01.png",
+    "test_index": 8325,
+    "true_label": 0,
+    "model_prediction": 0,
+    "confidence": 0.5048373341560364,
+    "runner_up": 6,
+    "runner_up_confidence": 0.4641295373439789,
+    "result": "correct"
+  },
+  {
+    "file": "digit_1_amb_02.png",
+    "test_index": 4507,
+    "true_label": 1,
+    "model_prediction": 1,
+    "confidence": 0.37481316924095154,
+    "runner_up": 7,
+    "runner_up_confidence": 0.36330553889274597,
+    "result": "correct"
+  },
+  {
+    "file": "digit_2_amb_03.png",
+    "test_index": 9839,
+    "true_label": 2,
+    "model_prediction": 2,
+    "confidence": 0.46948736906051636,
+    "runner_up": 3,
+    "runner_up_confidence": 0.3839416205883026,
+    "result": "correct"
+  },
+  {
+    "file": "digit_3_amb_04.png",
+    "test_index": 449,
+    "true_label": 3,
+    "model_prediction": 3,
+    "confidence": 0.506413459777832,
+    "runner_up": 5,
+    "runner_up_confidence": 0.49358582496643066,
+    "result": "correct"
+  },
+  {
+    "file": "digit_5_amb_05.png",
+    "test_index": 2040,
+    "true_label": 5,
+    "model_prediction": 5,
+    "confidence": 0.5406444668769836,
+    "runner_up": 6,
+    "runner_up_confidence": 0.4373222887516022,
+    "result": "correct"
+  },
+  {
+    "file": "digit_6_amb_06.png",
+    "test_index": 4536,
+    "true_label": 6,
+    "model_prediction": 5,
+    "confidence": 0.5032688975334167,
+    "runner_up": 6,
+    "runner_up_confidence": 0.48791149258613586,
+    "result": "wrong"
+  },
+  {
+    "file": "digit_7_amb_07.png",
+    "test_index": 9505,
+    "true_label": 7,
+    "model_prediction": 7,
+    "confidence": 0.4928523898124695,
+    "runner_up": 2,
+    "runner_up_confidence": 0.46965330839157104,
+    "result": "correct"
+  },
+  {
+    "file": "digit_8_amb_08.png",
+    "test_index": 6625,
+    "true_label": 8,
+    "model_prediction": 2,
+    "confidence": 0.46195605397224426,
+    "runner_up": 1,
+    "runner_up_confidence": 0.43339699506759644,
+    "result": "wrong"
+  },
+  {
+    "file": "digit_8_amb_09.png",
+    "test_index": 3559,
+    "true_label": 8,
+    "model_prediction": 5,
+    "confidence": 0.5349121689796448,
+    "runner_up": 8,
+    "runner_up_confidence": 0.45354998111724854,
+    "result": "wrong"
+  },
+  {
+    "file": "digit_9_amb_10.png",
+    "test_index": 2760,
+    "true_label": 9,
+    "model_prediction": 4,
+    "confidence": 0.5121910572052002,
+    "runner_up": 9,
+    "runner_up_confidence": 0.48630452156066895,
+    "result": "wrong"
+  }
+]

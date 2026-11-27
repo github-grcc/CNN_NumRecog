@@ -2,7 +2,7 @@
 
 ## Python 与虚拟环境
 
-使用 CPython `3.14.x` 和 [uv](https://docs.astral.sh/uv/getting-started/installation/)。在项目根目录运行以下命令。有同版本的 `.venv/` 时可以直接使用该环境安装依赖。
+本项目只在 Linux 上运行，不提供 Windows 或 macOS 配置。使用 CPython `3.14.x` 和 [uv](https://docs.astral.sh/uv/getting-started/installation/)。在项目根目录运行以下命令。有同版本的 `.venv/` 时可以直接使用该环境安装依赖。
 
 ```sh
 uv venv --python 3.14 .venv
@@ -10,7 +10,7 @@ uv pip install --python .venv --torch-backend=auto -r requirements.txt
 uv pip check --python .venv
 ```
 
-IDE 使用项目中的 Python 解释器。Windows 下为 `.venv/Scripts/python.exe`，macOS 和 Linux 下为 `.venv/bin/python`。
+IDE 使用项目中的 Python 解释器，路径为 `.venv/bin/python`。图形界面使用标准库 Tkinter；Linux 系统需要安装 `python3-tk`（多数桌面发行版已预装）。
 
 ## Requirements 与后端
 
@@ -23,9 +23,9 @@ IDE 使用项目中的 Python 解释器。Windows 下为 `.venv/Scripts/python.e
 | `matplotlib` | 学习曲线、卷积核、特征图与错分样本 |
 | `psutil` | 采样训练进程的内存 |
 
-新环境安装时解析当前平台兼容的稳定版。uv 的 `--torch-backend=auto` 根据当前环境选择 PyTorch 构建。只做 CPU 实验时，可在新环境中将安装命令的后端改为 `--torch-backend=cpu`。需要手动指定 GPU 构建时，按平台、GPU 与驱动从官方指南选择后端，并让 `torch` 和 `torchvision` 走同一构建源。[uv 的 PyTorch 安装说明](https://docs.astral.sh/uv/guides/integration/pytorch/#automatic-backend-selection) · [PyTorch 安装指南](https://pytorch.org/get-started/locally/)
+新环境安装时解析当前 Linux 环境兼容的稳定版。uv 的 `--torch-backend=auto` 根据当前环境选择 PyTorch 构建。只做 CPU 实验时，可将安装命令的后端改为 `--torch-backend=cpu`。需要手动指定 GPU 构建时，从官方 Linux 安装选项中选择后端，并让 `torch` 和 `torchvision` 走同一构建源。[uv 的 PyTorch 安装说明](https://docs.astral.sh/uv/guides/integration/pytorch/#automatic-backend-selection) · [PyTorch 安装指南](https://pytorch.org/get-started/locally/)
 
-正式跑实验前，用 `uv pip freeze --python .venv` 保存已安装的版本清单到本次运行目录，并记录 Python 版本和实际 PyTorch 后端。同平台复跑时使用该清单和对应后端。项目已有的 `pyproject.toml` 和 `uv.lock` 属于初始化模板，安装运行依赖时使用上述 `uv pip` 命令。
+正式跑实验前，用 `uv pip freeze --python .venv` 保存已安装的版本清单到本次运行目录，并记录 Python 版本和实际 PyTorch 后端。同机复跑时使用该清单和对应后端。项目已有的 `pyproject.toml` 和 `uv.lock` 属于初始化模板，安装运行依赖时使用上述 `uv pip` 命令。
 
 ## 设备选择与回退
 
@@ -46,13 +46,18 @@ CUDA 路径将模型、样本和标签放入同一设备，统一启用 `pin_mem
 ```text
 .
 ├── main.py                 命令行入口
-├── src/                    源码目录，以下模块待实现
+├── src/                    源码目录
 │   ├── __init__.py
 │   ├── data.py             数据集、预处理和 DataLoader
 │   ├── models.py           CNN 和全连接网络
 │   ├── train.py            设备选择、训练、资源计量和权重保存
-│   └── evaluate.py         测试、单图预测和结果可视化
+│   ├── evaluate.py         测试、单图预测和结果可视化
+│   ├── report.py           多种子汇总、差值表和 CSV/Markdown 输出
+│   ├── gui.py              Tkinter 单图预测与实验对比界面
+│   └── utils.py            运行目录、JSON 和环境信息
 ├── data/MNIST/raw/          MNIST 原始数据
+├── examples/digits/         GUI 用的 0-9 清晰示例
+├── examples/ambiguous/      GUI 用的低置信度模糊示例
 ├── artifacts/              按运行保存权重、指标、版本和图表
 ├── refs/                   课程原始资料
 ├── .venv/                  本地 Python 环境
@@ -60,6 +65,7 @@ CUDA 路径将模型、样本和标签放入同一设备，统一启用 `pin_mem
 ├── pyproject.toml          项目元数据模板
 ├── uv.lock                 uv 项目初始化锁文件
 ├── requirements.txt        直接运行依赖
+├── USAGE.md                常用命令和 GUI 使用说明
 ├── environment.md          环境和工程说明
 ├── workflow.md             网络构建
 └── experiment.md           实验设置与指标
